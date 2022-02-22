@@ -1,10 +1,10 @@
-FROM node:16.13.1-alpine
+FROM node:latest-alpine
 
 WORKDIR /code
 
 COPY package.json package.json
 
-RUN npm -s install --production --prefix /var/task
+RUN npm install
 
 COPY . .
 
