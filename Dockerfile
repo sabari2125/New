@@ -4,7 +4,7 @@ WORKDIR /code
 
 COPY package.json package.json
 
-RUN sudo npm install
+RUN npm -s install --production --prefix /var/task
 
 COPY . .
 
